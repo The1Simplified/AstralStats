@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- If title is supplied add title to tab, if not then dont -->
+    {% if title %}
+    <title>xbox.AstralStats - {{ title }}</title>
+    {% else %}
+    <title>xbox.AstralStats</title>
+    {% endif %} {% endblock %} {% block stylesheets %}
+
+    <!-- bootstrap stylesheet allowing me to use their styles to make a clean web experiance -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom style sheet used -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+
+    {% endblock %}
+
+  </head>
+  <body>
+    {% block navbar %}
+
+    <!-- bootstrap navbar allowing for clean layout at the top for quick links -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container dflex justify-content-center">
+          <a class="navbar-brand mb-2" href="/">xbox.AstralStats.com</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggle"
+            aria-controls="navbarToggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="form-inline" action="{{ url_for('homepage') }}" method="post">
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputGamertag" class="sr-only">Gamertag</label>
+              <input type="text" class="form-control" name="gamertag" placeholder="Gamertag(Case Sensitive)">
+            </div>
+            <input class="btn btn-success mb-2" type="submit" value="Search">
+          </form>
+        </div>
+        <div class="navbar-nav">
+          <a class="" href="{{ url_for('sign_in') }}">Sign In</a>
+        </div>
+      </nav>
+    </header>
+
+    {% endblock %}
+
+    <!-- Accept blocks of content and input that html inside this container -->
+
+    <main role="main" class="background">
+      <div class="container content">
+        <div class="row">
+          <div class="col-md-12">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %} {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %} {% endif %} {% endwith %} 
+            {% block content %}{% endblock%}
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer for all pages -->
+    <footer class="py-4 flex-shrink-0">
+        <div class="container text-center">
+          © All right Reversed. Marcus Scheiterle; Simpl1f1ed
+          <div class="text-muted">Disclaimer: Xbox, Xbox One and Xbox Live are trademarks of Microsoft Corporation. This website is in no way endorsed by or affiliated with Microsoft Corporation, or any associated subsidiaries, logos or trademarks.</div>
+        </div>
+    </footer>
+
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+    <script>
+      function detectMob() {
+        return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+      }
+      if (detectMob()) {
+        window.location.replace('http://localhost:5000/window_too_small');
+      }
+    </script>
+  </body>
+</html>
