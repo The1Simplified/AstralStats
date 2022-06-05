@@ -1,4 +1,3 @@
-import asyncio
 import os
 import pathlib
 import string
@@ -67,5 +66,4 @@ async def homepage(gamertag: string = ""):
 
 if __name__ == "__main__":
     from waitress import serve
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     serve(app, host='0.0.0.0', port=5000)
