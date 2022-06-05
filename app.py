@@ -71,4 +71,4 @@ async def homepage(gamertag: string = ""):
     return render_template('homepage.html', title='Home')
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=False)
+    app.run(debug=False, host="0.0.0.0")
