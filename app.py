@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 client_id = os.getenv('MS_CLIENT_ID')
 client_secret = os.getenv('MS_CLIENT_SECRET')
-tokens_file = (str(pathlib.Path(__file__).parent.resolve()) + (f"\\tokens.json"))
+tokens_file = (str(pathlib.Path(__file__).parent.resolve()) + (f"/tokens.json"))
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/<string:gamertag>', methods=['GET', 'POST'])
@@ -27,7 +27,6 @@ async def homepage(gamertag: string = ""):
                 tokens = f.read()
             auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
         except FileNotFoundError:
-            print(tokens_file)
             exit(-1)
         try:
             await auth_mgr.refresh_tokens()
