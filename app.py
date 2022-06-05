@@ -11,13 +11,12 @@ from xbox.webapi.api.client import XboxLiveClient
 from xbox.webapi.authentication.manager import AuthenticationManager
 from xbox.webapi.authentication.models import OAuth2TokenResponse
 
-print("############> New Instance")
-
 app = Flask(__name__)
 
 client_id = os.getenv('MS_CLIENT_ID')
 client_secret = os.getenv('MS_CLIENT_SECRET')
 tokens_file = (str(pathlib.Path(__file__).parent.resolve()) + (f"/tokens.json"))
+os.chmod(tokens_file, 0755)
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/<string:gamertag>', methods=['GET', 'POST'])
