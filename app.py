@@ -11,6 +11,8 @@ from xbox.webapi.api.client import XboxLiveClient
 from xbox.webapi.authentication.manager import AuthenticationManager
 from xbox.webapi.authentication.models import OAuth2TokenResponse
 
+print("############> New Instance")
+
 app = Flask(__name__)
 
 client_id = os.getenv('MS_CLIENT_ID')
