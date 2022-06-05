@@ -1,7 +1,6 @@
 import asyncio
 import string
 import sys
-from xml.dom import ValidationErr
 
 from aiohttp import ClientResponseError, ClientSession
 from flask import Flask, flash, render_template, redirect, url_for, request
@@ -87,5 +86,4 @@ async def window_too_small():
 
 
 if __name__ == "__main__":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     app.run(host='localhost', port=5000, debug=True)
