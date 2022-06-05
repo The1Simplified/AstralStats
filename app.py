@@ -16,7 +16,7 @@ app = Flask(__name__)
 client_id = os.getenv('MS_CLIENT_ID')
 client_secret = os.getenv('MS_CLIENT_SECRET')
 tokens_file = (str(pathlib.Path(__file__).parent.resolve()) + (f"/static/tokens.json"))
-os.chmod(tokens_file, 755)
+os.chmod(tokens_file, 0o755)
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/<string:gamertag>', methods=['GET', 'POST'])
