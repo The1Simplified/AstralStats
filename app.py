@@ -42,7 +42,6 @@ async def homepage(gamertag: string = ""):
                 xbl_profile = await xbl_client.profile.get_profile_by_gamertag(gamertag)
                 friends_raw = await xbl_client.people.get_friends_by_xuid(xbl_profile.profile_users[0].id)
                 friends_sorted = sorted(friends_raw.people, key=lambda d: d.presence_state)
-                #parsed_profile = parse_profile(xbl_profile)
                 
                 friends_invert_sorted = friends_sorted[::-1]
                 flag = False
@@ -66,4 +65,5 @@ async def homepage(gamertag: string = ""):
     return render_template('homepage.html', title='Home')
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5000, debug=True)
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=5000)
