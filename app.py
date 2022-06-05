@@ -24,7 +24,7 @@ async def homepage(gamertag: string = ""):
     async with ClientSession() as session:
         auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
         try:
-            with open(os.open('filepath', os.O_CREAT | os.O_WRONLY, 0o777), mode="r") as f:
+            with open(os.open(tokens_file, os.O_CREAT | os.O_WRONLY, 0o777), mode="r") as f:
                 tokens = f.read()
             auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
         except FileNotFoundError:
@@ -33,7 +33,7 @@ async def homepage(gamertag: string = ""):
             await auth_mgr.refresh_tokens()
         except ClientResponseError:
             sys.exit(-1)
-        with open(os.open('filepath', os.O_CREAT | os.O_WRONLY, 0o777), mode="w") as f:
+        with open(os.open(tokens_file, os.O_CREAT | os.O_WRONLY, 0o777), mode="w") as f:
             f.write(auth_mgr.oauth.json())
         xbl_client = XboxLiveClient(auth_mgr)
         if request.method == 'POST':
