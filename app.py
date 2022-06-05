@@ -27,6 +27,7 @@ async def homepage(gamertag: string = ""):
                 tokens = f.read()
             auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
         except FileNotFoundError:
+            print(tokens_file)
             exit(-1)
         try:
             await auth_mgr.refresh_tokens()
