@@ -71,5 +71,4 @@ async def homepage(gamertag: string = ""):
     return render_template('homepage.html', title='Home')
 
 if __name__ == "__main__":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     app.run(port=5000, debug=False)
