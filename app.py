@@ -1,11 +1,11 @@
 import asyncio
+import os
+import pathlib
 import string
 import sys
 
 from aiohttp import ClientResponseError, ClientSession
 from flask import Flask, flash, render_template, redirect, url_for, request
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
 from pydantic import ValidationError
 from xbox import *
 from xbox.webapi.api.client import XboxLiveClient
@@ -14,10 +14,13 @@ from xbox.webapi.authentication.models import OAuth2TokenResponse
 
 app = Flask(__name__)
 
-client_id = '640c09c8-8f82-47a3-aa70-6ab8441acfb4'
-client_secret = 'rF38Q~P64OssW3ZH1AnXr4l4zcxW_jOn1hr1Icr7' # 77e7672b-fb15-4bea-8f6f-936a5e16f179
-tokens_file = "C:/Users/Marcus/AppData/Local/OpenXbox/xbox/tokens.json"
-redirect_url = "http://localhost/homepage"
+client_id = os.getenv('MS_CLIENT_ID')
+client_secret = os.getenv('MS_CLIENT_SECRET')
+tokens_file = (str(pathlib.Path(__file__).parent.resolve()) + (f"\\tokens.json"))
+
+#client_id = '640c09c8-8f82-47a3-aa70-6ab8441acfb4'
+#client_secret = 'rF38Q~P64OssW3ZH1AnXr4l4zcxW_jOn1hr1Icr7' # 77e7672b-fb15-4bea-8f6f-936a5e16f179
+#tokens_file = "C:/Users/Marcus/AppData/Local/OpenXbox/xbox/tokens.json"
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/<string:gamertag>', methods=['GET', 'POST'])
@@ -66,24 +69,7 @@ async def homepage(gamertag: string = ""):
             return render_template('homepage.html', title=f'User: {gamertag}', profile=x, friends=friends_sorted)
         
     return render_template('homepage.html', title='Home')
-    
-@app.route('/signin', methods=['GET', 'POST'])
-async def sign_in():
-    async with ClientSession() as session:
-        auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
-        authenticationURL = auth_mgr.generate_authorization_url()+redirect_url
-    return redirect(authenticationURL)
-
-@app.route('/window_too_small', methods=['GET', 'POST'])
-async def window_too_small():
-    return render_template('window_too_small.html')
-
-#def parse_profile(profile):
-#    parsed_profile = {}
-#    for setting in profile.profile_users[0].settings:
-#        parsed_profile[f'{setting.id}'] = setting.value
-#    return parsed_profile
-
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5000, debug=True)
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    app.run(port=5000, debug=False)

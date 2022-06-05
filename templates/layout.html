@@ -84,9 +84,6 @@
             <input class="btn btn-success mb-2" type="submit" value="Search">
           </form>
         </div>
-        <div class="navbar-nav">
-          <a class="" href="{{ url_for('sign_in') }}">Sign In</a>
-        </div>
       </nav>
     </header>
 
@@ -123,14 +120,6 @@
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
       });
-    </script>
-    <script>
-      function detectMob() {
-        return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
-      }
-      if (detectMob()) {
-        window.location.replace('http://localhost:5000/window_too_small');
-      }
     </script>
   </body>
 </html>
