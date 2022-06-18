@@ -4,6 +4,9 @@
     --secondary-color: #270082;
     --tertiary-color: #7A0BC0;
     --quaternary-color: #FA58B6;
+    --provider-color-xbox: #107c10;
+    --provider-color-playstation: #003791;
+    --provider-color-steam: #00adee;
 }
 
 body {
@@ -32,6 +35,20 @@ a:focus {
 i,
 span {
     display: inline-block;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+li.nav-item .input-group {
+    max-width: 500px;
+    width: 60vw;
 }
 
 
@@ -99,11 +116,15 @@ span {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
+    min-height: 70px;
+    height: 9vh;
+    padding: 10%;
+    text-align: center;
     background: var(--primary-color);
 }
 
 #sidebar .sidebar-header strong {
+    padding: 20%;
     display: none;
     font-size: 1.8em;
 }
@@ -119,24 +140,24 @@ span {
     display: block;
 }
 
+#sidebar ul li:hover {
+    background-image: linear-gradient(to right, var(--tertiary-color), var(--secondary-color));
+}
+
 #sidebar ul li .home:hover {
     color: #fff;
-    background-image: linear-gradient(to right, var(--tertiary-color), var(--secondary-color));
 }
 
 #sidebar ul li .provider-xbox:hover {
-    color: #107c10;
-    background-image: linear-gradient(to right, var(--tertiary-color), var(--secondary-color));
+    color: var(--provider-color-xbox);
 }
 
 #sidebar ul li .provider-playstation:hover {
-    color: #003791;
-    background-image: linear-gradient(to right, var(--tertiary-color), var(--secondary-color));
+    color: var(--provider-color-playstation);
 }
 
 #sidebar ul li .provider-steam:hover {
-    color: #00adee;
-    background-image: linear-gradient(to right, var(--tertiary-color), var(--secondary-color));
+    color: var(--provider-color-steam);
 }
 
 #sidebar ul li a i {
@@ -189,22 +210,19 @@ a.github {
     color: #333333;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
 
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 
+.bg-light {
+    min-height: 70px;
+    height: 9vh;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
 #content {
-    padding: 20px;
     min-height: 100vh;
     width: 100vw;
     transition: all 0.3s;
@@ -212,6 +230,7 @@ a.github {
 
 #elements {
     text-align: center;
+    padding-top: 1%;
 }
 
 

@@ -1,4 +1,5 @@
 waitress
 flask[async]
 flask_session
+flask_sqlalchemy
 xbox-webapi

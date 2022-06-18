@@ -33,32 +33,31 @@
     <div class="wrapper">
       <!-- Sidebar Holder -->
       <nav id="sidebar">
-        <div class="sidebar-header">
-          <h3>AstalStats</h3>
-          <strong>AS</strong>
-        </div>
+        <a class="home" href="{{ url_for('main.homepage') }}">
+          <div class="sidebar-header">
+            <h3>AstalStats</h3>
+            <strong>AS</strong>
+          </div>
+        </a>
 
         <ul class="list-unstyled components">
           <li>
-            <a class="home" href="{{ url_for('homepage') }}">
-              <i class="fa-solid fa-house"></i>
-              Home
-            </a>
-          </li>
-          <li>
-            <a class="provider-xbox" href="{{ url_for('xbox') }}">
+            <a class="provider-xbox" href="{{ url_for('xbox.main') }}">
               <i class="fa-brands fa-xbox"></i>
               Xbox
             </a>
           </li>
           <li>
-            <a class="provider-playstation" href="{{ url_for('playstation') }}">
+            <a
+              class="provider-playstation"
+              href="{{ url_for('playstation.main') }}"
+            >
               <i class="fa-brands fa-playstation"></i>
               PSN
             </a>
           </li>
           <li>
-            <a class="provider-steam" href="{{ url_for('steam') }}">
+            <a class="provider-steam" href="{{ url_for('steam.main') }}">
               <i class="fa-brands fa-steam"></i>
               Steam
             </a>
@@ -75,31 +74,81 @@
               <i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
           </li>
-          <form id="search-form">
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">@</span>
             </div>
-            <input id="search" name="search" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <input
+              id="gamertagInput"
+              name="search"
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="searchUsername"
+              aria-describedby="basic-addon1"
+            />
             <div class="input-group-append">
-              <button class="btn btn-secondary" type="submit">
+              <button
+                class="btn btn-secondary"
+                type="submit"
+                id="gamertagSubmit"
+              >
                 <i class="fa fa-search"></i>
               </button>
             </div>
           </div>
-          </form>
         </ul>
       </nav>
 
       <!-- Page Content Holder -->
       <div id="content">
-        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-          <i class="fa-solid fa-align-left"></i>
-        </button>
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
 
-        <div id="elements">
-          {% block content %}{% endblock%}
-        </div>
+            <div class="" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <select
+                        class="input-group-text form-select"
+                        id="platformInputNav"
+                      >
+                        <option selected>@</option>
+                        <option value="xbox">Xbox</option>
+                        <option value="playstation">PSN</option>
+                        <option value="steam">Steam</option>
+                      </select>
+                    </div>
+                    <input
+                      id="gamertagInputNav"
+                      name="search"
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                      aria-label="searchUsername"
+                      aria-describedby="platformInputNav"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-secondary"
+                        type="submit"
+                        id="gamertagSubmitNav"
+                      >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div id="elements">{% block content %}{% endblock%}</div>
       </div>
     </div>
 
@@ -107,11 +156,42 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Cookies -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function () {
+        var clicked = Cookies.get("active");
+
+        if (clicked == "true" && $("#sidebar").hasClass("active") == false) {
+          $("#sidebar").toggleClass("active");
+        }
+
         $("#sidebarCollapse").on("click", function () {
           $("#sidebar").toggleClass("active");
+          Cookies.set("active", $("#sidebar").hasClass("active"));
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#gamertagSubmit").on("click", function () {
+          var search = $("#gamertagInput").val();
+          if ($.trim(search) != "") {
+            window.location.href = "http://localhost:5000/search/" + search;
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#gamertagSubmitNav").on("click", function () {
+          var platform = $("#platformInputNav").val();
+          var search = $("#gamertagInputNav").val();
+          if ($.trim(search) != "") {
+            window.location.href =
+              "http://localhost:5000/search/" + platform + "/" + search;
+          }
         });
       });
     </script>
