@@ -1,4 +1,16 @@
 {% extends "layout.html" %}{% block content %}
-search_for: {{ platform }} {{ search }}
-{{ xbox_search_results }}
+<h1 class="text-center text-primary-color" style="color: var(--primary-color)">
+  <span style="color: var(--quaternary-color)"
+    >{{xbox_search.results|length}}</span
+  >
+  {% if platform == '@' %} Search Result{% if xbox_search.results|length > 1
+  %}<span>s</span>{% endif %} For:
+  <span style="color: var(--quaternary-color)"
+    >{{ platform }}{{ username }}</span
+  >
+  {% else %} Search Result{% if xbox_search.results|length > 1
+  %}<span>s</span>{% endif %} On
+  <span style="{{platform_string}}">{{ platform }}</span> For:
+  <span style="color: var(--quaternary-color)">{{ username }}</span> {% endif %}
+</h1>
 {%endblock%}

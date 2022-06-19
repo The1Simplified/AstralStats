@@ -21,6 +21,7 @@ async def homepage():
 
 @main.route("/search/<string:platform>/<string:username>", methods=["GET", "POST"])
 async def saerch(platform: str = "", username: str = ""):
+    platform_string = f"color:var(--provider-color-{platform})"
     async with aiohttp.ClientSession() as session:
         auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
         try:
@@ -34,6 +35,6 @@ async def saerch(platform: str = "", username: str = ""):
             sys.exit(-1)
         os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
         xbl_client = XboxLiveClient(auth_mgr)
-        xbox_search_results = await xbl_client.usersearch.get_live_search(username)
+        xbox_search = await xbl_client.usersearch.get_live_search(username)
 
-    return render_template("search.html", platform=platform, search=username, xbox_search_results=xbox_search_results)
+    return render_template("search.html", platform=platform, username=username, xbox_search=xbox_search, platform_string=platform_string)

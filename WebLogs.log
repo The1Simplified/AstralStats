@@ -1,0 +1,223 @@
+06/19/2022 at 08:04:43 AM | [INFO]  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.118:5000 (Press CTRL+C to quit)
+06/19/2022 at 08:04:43 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:04:44 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:04:44 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:04:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:04:44] "GET / HTTP/1.1" 200 -
+06/19/2022 at 08:04:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:04:44] "GET / HTTP/1.1" 200 -
+06/19/2022 at 08:04:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:04:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:11:54 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:11:54] "GET / HTTP/1.1" 200 -
+06/19/2022 at 08:11:54 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:11:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:12:59 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:12:59 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:13:03 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:13:03 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:13:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:13:13] "GET / HTTP/1.1" 200 -
+06/19/2022 at 08:13:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:13:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:13:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:13:16] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:13:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:13:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:14:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:14:40] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:14:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:14:40] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:15:39 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:15:39] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:15:39 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:15:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:16:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:13] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:16:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:16:37 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:37] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:16:37 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:16:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:52] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:16:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:16:54 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:54] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:16:54 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:16:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:17:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:03] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:17:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:17:11 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:11] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:17:11 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:17:17 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:17] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:17:17 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:17:20 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:20] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:17:20 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:17:28 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:28] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:17:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:17:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:19:24 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:24] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:19:24 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:19:26 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:26] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:19:26 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:19:51 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:51] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:19:51 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:19:59 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:59] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:19:59 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:19:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:20:02 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:02] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:20:02 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:20:25 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:25] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:20:25 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:20:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:42] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:20:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:20:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:21:02 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:21:02] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:21:02 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:21:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:21:51 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:21:51] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:21:51 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:21:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:22:01 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:22:01] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:22:02 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:22:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:23:38 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:23:38] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:23:38 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:23:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:24:07 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:07] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:24:07 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:24:27 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:27] "GET /search/xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:24:27 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:24:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:52] "GET /search/xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:24:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:24:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:25:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:25:03] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:25:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:25:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:26:32 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:32] "[35m[1mGET /search/Xbox/Simpl1f1ed HTTP/1.1[0m" 500 -
+06/19/2022 at 08:26:32 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:32] "GET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+06/19/2022 at 08:26:32 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:32] "GET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+06/19/2022 at 08:26:33 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:33] "GET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+06/19/2022 at 08:26:33 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:33] "[36mGET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+06/19/2022 at 08:26:39 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:39] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:26:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:26:47 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:47] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:26:48 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:26:53 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:53] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:26:53 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:26:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:30:26 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:30:26] "GET / HTTP/1.1" 200 -
+06/19/2022 at 08:30:26 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:30:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:31:12 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:12] "GET /xbox HTTP/1.1" 200 -
+06/19/2022 at 08:31:12 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:31:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:16] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:31:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:31:43 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:43] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:31:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:31:56 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:56] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:31:56 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:31:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:32:05 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:05] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:32:05 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:32:18 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:18] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:32:18 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:32:27 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:27] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:32:27 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:32:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:33:12 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:33:12] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:33:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:33:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:35:10 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:35:10] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:35:10 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:35:10] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:35:46 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:35:46] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:35:46 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:35:46] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:36:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:03] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:36:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:03] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:36:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:40] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:36:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:40] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:36:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:42] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:36:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:36:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:37:00 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:37:00] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:37:00 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:37:00] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:37:55 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:37:55] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:37:55 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:37:55] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:38:15 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:38:15] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:38:15 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:38:15] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:39:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:39:50] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:39:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:39:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:40:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:40:44] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:40:44 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:40:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:41:05 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:05] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:41:05 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:41:07 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:07] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:41:07 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:41:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:16] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:41:16 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:41:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:42:12 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:42:12] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:42:12 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:42:12] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:42:48 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:42:48] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:42:48 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:42:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:43:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:43:13] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:43:13 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:43:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:43:35 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:43:35] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:43:35 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:43:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:45:45 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:45:45] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:45:45 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:45:45] "GET /static/css/main.css HTTP/1.1" 200 -
+06/19/2022 at 08:46:04 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:04] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:46:04 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:46:09 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:09] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:46:09 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:46:21 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:21] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:46:21 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:46:24 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:24] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:46:24 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:46:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:48:02 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:48:02 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:48:05 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:48:05 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:48:07 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:48:07 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:49:08 AM | [INFO]  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.118:5000 (Press CTRL+C to quit)
+06/19/2022 at 08:49:08 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:49:09 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:49:09 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:49:11 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:11] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:49:11 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:49:14 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:14] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:49:14 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:49:17 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:49:40 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:49:40 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:49:41 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:49:41 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:49:44 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:49:44 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:49:45 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:49:45 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:49:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:50] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:49:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:49:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:52] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:49:52 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:49:55 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:49:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:25 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:25] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:50:25 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:30 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:42] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:50:42 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:45 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:45] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:50:45 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:48 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:50:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:50:54 AM | [INFO]  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.118:5000 (Press CTRL+C to quit)
+06/19/2022 at 08:50:54 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:50:55 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:50:55 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:51:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:51:03] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:51:03 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:51:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:51:06 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:51:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:51:43 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 08:51:43 AM | [INFO]  * Restarting with stat
+06/19/2022 at 08:51:45 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 08:51:45 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 08:51:46 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:51:46] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:51:46 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:51:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:52:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:52:40] "GET /search/Playstation/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:52:40 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:52:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:52:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:52:50] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:52:50 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:52:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:53:28 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:53:28] "GET /search/Steam/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:53:28 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:53:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 08:53:33 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:53:33] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 08:53:33 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 08:53:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 09:01:32 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:01:32] "GET /search/@/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 09:01:32 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:01:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 09:01:41 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:01:41] "GET /search/Xbox/Simpl1f1ed HTTP/1.1" 200 -
+06/19/2022 at 09:01:41 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:01:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+06/19/2022 at 09:03:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:03:29] "[35m[1mGET /search/Xbox/Simpl1f1ed HTTP/1.1[0m" 500 -
+06/19/2022 at 09:03:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:03:29] "[36mGET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+06/19/2022 at 09:03:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:03:29] "[36mGET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+06/19/2022 at 09:03:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:03:29] "[36mGET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+06/19/2022 at 09:03:29 AM | [INFO] 127.0.0.1 - - [19/Jun/2022 09:03:29] "[36mGET /search/Xbox/Simpl1f1ed?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+06/19/2022 at 09:04:20 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 09:04:20 AM | [INFO]  * Restarting with stat
+06/19/2022 at 09:04:24 AM | [WARNING]  * Debugger is active!
+06/19/2022 at 09:04:24 AM | [INFO]  * Debugger PIN: 595-507-366
+06/19/2022 at 09:04:25 AM | [INFO]  * Detected change in 'c:\\Users\\Marcus\\Desktop\\Projects\\SoftwareProjects\\AstralStats\\routes\\main\\routes.py', reloading
+06/19/2022 at 09:04:25 AM | [INFO]  * Restarting with stat

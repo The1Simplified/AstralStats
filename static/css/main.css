@@ -4,9 +4,9 @@
     --secondary-color: #270082;
     --tertiary-color: #7A0BC0;
     --quaternary-color: #FA58B6;
-    --provider-color-xbox: #107c10;
-    --provider-color-playstation: #003791;
-    --provider-color-steam: #00adee;
+    --provider-color-Xbox: #107c10;
+    --provider-color-Playstation: #003791;
+    --provider-color-Steam: #00adee;
 }
 
 body {
@@ -23,6 +23,10 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: #fff;
+}
+
+h1 {
+    font-weight: bold;
 }
 
 a,
@@ -150,15 +154,15 @@ li.nav-item .input-group {
 }
 
 #sidebar ul li .provider-xbox:hover {
-    color: var(--provider-color-xbox);
+    color: var(--provider-color-Xbox);
 }
 
 #sidebar ul li .provider-playstation:hover {
-    color: var(--provider-color-playstation);
+    color: var(--provider-color-Playstation);
 }
 
 #sidebar ul li .provider-steam:hover {
-    color: var(--provider-color-steam);
+    color: var(--provider-color-Steam);
 }
 
 #sidebar ul li a i {
