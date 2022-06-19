@@ -176,9 +176,11 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#gamertagSubmit").on("click", function () {
+          var platform = $("#platformInput").val();
           var search = $("#gamertagInput").val();
           if ($.trim(search) != "") {
-            window.location.href = "http://localhost:5000/search/" + search;
+            window.location.href =
+              "http://localhost:5000/search/" + platform + "/" + search;
           }
         });
       });
@@ -191,6 +193,34 @@
           if ($.trim(search) != "") {
             window.location.href =
               "http://localhost:5000/search/" + platform + "/" + search;
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var input = document.getElementById("gamertagInputNav");
+        input.addEventListener("keypress", function (event) {
+          var search = $("#gamertagInputNav").val();
+          if ($.trim(search) != "") {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              document.getElementById("gamertagSubmitNav").click();
+            }
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var input = document.getElementById("gamertagInput");
+        input.addEventListener("keypress", function (event) {
+          var search = $("#gamertagInput").val();
+          if ($.trim(search) != "") {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              document.getElementById("gamertagSubmit").click();
+            }
           }
         });
       });
