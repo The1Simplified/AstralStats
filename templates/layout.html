@@ -176,11 +176,10 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#gamertagSubmit").on("click", function () {
-          var platform = $("#platformInput").val();
           var search = $("#gamertagInput").val();
           if ($.trim(search) != "") {
             window.location.href =
-              "http://localhost:5000/search/" + platform + "/" + search;
+              "http://localhost:5000/search/@/" + search;
           }
         });
       });

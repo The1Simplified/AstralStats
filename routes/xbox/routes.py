@@ -9,5 +9,5 @@ async def main():
 
 
 @xbox.route("/xbox/user/<string:username>", methods=["GET", "POST"])
-async def xbox_user_account():
-    return render_template("xbox_user_account.html")
+async def xbox_user_account(username: str = ""):
+    return render_template("xbox_user_account.html", username=username)

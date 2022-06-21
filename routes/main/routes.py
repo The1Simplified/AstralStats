@@ -1,3 +1,4 @@
+import asyncio
 from flask import Blueprint, render_template
 
 import os
@@ -8,6 +9,8 @@ from xbox import *
 from xbox.webapi.api.client import XboxLiveClient
 from xbox.webapi.authentication.manager import AuthenticationManager
 from xbox.webapi.authentication.models import OAuth2TokenResponse
+
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 client_id = os.environ.get("MS_CLIENT_ID")
 client_secret = os.environ.get("MS_CLIENT_SECRET")
