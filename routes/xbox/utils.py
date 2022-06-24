@@ -9,8 +9,10 @@ from xbox.webapi.api.client import XboxLiveClient
 from xbox.webapi.authentication.manager import AuthenticationManager
 from xbox.webapi.authentication.models import OAuth2TokenResponse
 
-if 'windows' in platform.system().lower():
+try:
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+except AttributeError:
+    pass
 
 client_id = os.environ.get("MS_CLIENT_ID")
 client_secret = os.environ.get("MS_CLIENT_SECRET")
