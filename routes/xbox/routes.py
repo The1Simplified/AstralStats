@@ -1,8 +1,7 @@
 from aiohttp import ClientResponseError
-from flask import Blueprint, redirect, request, flash
+from flask import Blueprint, redirect, render_template, request, flash
 from pydantic import ValidationError
 from routes.xbox.utils import get_user_info
-from routes.main.utils import render_template
 
 xbox = Blueprint('xbox', __name__)
 
@@ -20,6 +19,10 @@ async def xbox_user_account(xuid: str = ""):
         flash("Sorry this account cannont be accessed: Error 403", 'error')
         return redirect(request.referrer)
     except ValidationError:
-        flash("Sorry try waiting a little before request a large account again: Error ValidationError", 'error')
+        flash(
+            "Sorry try waiting a little before request a large account again: Error ValidationError",
+            'error')
         return redirect(request.referrer)
-    return render_template("xbox_user_account.html", user_data=user_data, user_friends_sorted=user_friends_sorted)
+    return render_template("xbox_user_account.html",
+                           user_data=user_data,
+                           user_friends_sorted=user_friends_sorted)

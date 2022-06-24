@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, session
 from routes.xbox.utils import get_user_search
-from routes.main.utils import render_template
 
 main = Blueprint('main', __name__)
 

@@ -193,7 +193,7 @@
         $("#gamertagSubmit").on("click", function () {
           var search = $("#gamertagInput").val();
           if ($.trim(search) != "") {
-            window.location.href = "{{ domain_url }}search/@/" + search;
+            window.location.href = "/search/@/" + search;
           }
         });
       });
@@ -205,7 +205,7 @@
           var search = $("#gamertagInputNav").val();
           if ($.trim(search) != "") {
             window.location.href =
-            "{{ domain_url }}search/" + platform + "/" + search;
+            "/search/" + platform + "/" + search;
           }
         });
       });

@@ -1,5 +1,4 @@
-from flask import Blueprint
-from routes.main.utils import render_template
+from flask import Blueprint, render_template
 
 playstation = Blueprint('playstation', __name__)
 
