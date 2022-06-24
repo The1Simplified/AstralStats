@@ -52,8 +52,19 @@ span {
 }
 
 li.nav-item .input-group {
-    max-width: 500px;
-    width: 60vw;
+    max-width: 300px;
+    min-width: 40vw;
+}
+
+.search-result-container {
+    border-radius: 25px;
+    min-width: 25%;
+    max-width: 33%;
+}
+
+.account-section {
+    background: linear-gradient(var(--primary-color), transparent 90%);
+    border-radius: 25px;
 }
 
 
@@ -239,6 +250,10 @@ a.github {
     overflow: hidden;
     text-align: center;
     padding: 2%;
+}
+
+.color-on-hover:hover {
+    opacity: 75%;
 }
 
 

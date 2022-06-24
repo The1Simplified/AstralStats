@@ -1,6 +1,6 @@
 {% extends "layout.html" %}{% block content %}
 <!-- Begin Result Header -->
-<h1 class="text-center text-primary-color" style="color: var(--primary-color)">
+<h1 class="text-center text-primary-color mb-0" style="color: var(--primary-color)">
   <span style="color: var(--quaternary-color)"
     >{{xbox_search.results|length}}</span
   >
@@ -14,50 +14,54 @@
   <span style="{{platform_string}}">{{ platform }}</span> For:
   <span style="color: var(--quaternary-color)">{{ username }}</span> {% endif %}
 </h1>
+<p class="text-white m-2">Only the top 8 results will show per platform</p>
 <!-- End Result Header -->
 {% if platform == '@' %}
 <!-- Begin Non PLatform Specific Search Results -->
 <div class="d-flex flex-row justify-content-center" style="min-height: 60vh;">
-  <div class="container" style="background: linear-gradient(var(--provider-color-Xbox), transparent 90%); border-radius: 25px; min-width: 25%; max-width: 33%;">
+  <div class="container search-result-container" style="background: linear-gradient(var(--provider-color-Xbox), transparent 90%);">
     {% for n in range(xbox_search.results| length) %}
-    <a href="/xbox/user/{{ xbox_search.results[n].result.gamertag }}">
-    <div class="row justify-content-center">
-      <div class="col-sm-3 m-2">
-        <img
-          style="
-            border-radius: 25px;
-            max-width: 100%;
-            max-height: 100%;
-            -webkit-mask-image: -webkit-gradient(
-              linear,
-              left top,
-              left bottom,
-              from(rgba(0, 0, 0, 1)),
-              to(rgba(0, 0, 0, 0))
-            );
-            mask-image: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 1),
-              rgba(0, 0, 0, 0)
-            );
-          "
-          onerror="javascript:this.src='/static/site_images/default.png'"
-          src="{{ xbox_search.results[n].result.display_pic_uri|replace('&background=0xababab&mode=Padding', '') }}"
-        />
+    <a href="/xbox/xuid/{{ xbox_search.results[n].result.id }}">
+      {% if n+1 == xbox_search.results| length %}
+      <div class="row justify-content-center">
+      {% else %}
+      <div class="row border-bottom">
+      {% endif %}
+        <div class="col-md-4 m-2">
+          <img
+            style="
+              border-radius: 25px;
+              width: 100%;
+              -webkit-mask-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                from(rgba(0, 0, 0, 1)),
+                to(rgba(0, 0, 0, 0))
+              );
+              mask-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+              );
+            "
+            onerror="javascript:this.src='/static/site_images/default.png'"
+            src="{{ xbox_search.results[n].result.display_pic_uri|replace('&background=0xababab&mode=Padding', '') }}"
+          />
+        </div>
+        <div class="col m-2" style="overflow: hidden; white-space: nowrap; text-align: left;">
+          <p><i class="fa-brands fa-xbox"></i> {{ xbox_search.results[n].result.gamertag }}</p>
+          <p>XUID: <span>{{ xbox_search.results[n].result.id }}</span> </p>
+        </div>
       </div>
-      <div class="col-md-auto m-2">
-        <h2 class="text-white m-2" style="font-size: max(1.7vw, 20px);"><i class="fa-brands fa-xbox"></i> {{ xbox_search.results[n].result.gamertag }}</h2>
-        <p class="text-white text-muted m-2" style="font-size: max(1vw, 9px);">XUID#: {{ xbox_search.results[n].result.id }}</p>
-      </div>
-    </div>
     </a>
     {% endfor %}
   </div>
-  <div class="container" style="background: linear-gradient(var(--provider-color-Playstation), transparent 90%); border-radius: 25px; min-width: 25%; max-width: 33%;">
-    <h1 style="text-white font-size: 2vw;">Not yet supported</h1>
+  <div class="container search-result-container" style="background: linear-gradient(var(--provider-color-Playstation), transparent 90%);">
+    <h1 class="text-white" style="font-size: 1rem;">Not yet supported</h1>
   </div>
-  <div class="container" style="background: linear-gradient(var(--provider-color-Steam), transparent 90%); border-radius: 25px; min-width: 25%; max-width: 33%;">
-    <h1 style="text-white font-size: 2vw;">Not yet supported</h1>
+  <div class="container search-result-container" style="background: linear-gradient(var(--provider-color-Steam), transparent 90%);">
+    <h1 class="text-white" style="font-size: 1rem;">Not yet supported</h1>
   </div>
 </div>
 <!-- End Non PLatform Specific Search Results -->
@@ -66,9 +70,9 @@
 {% for n in range(xbox_search.results| length) %}
 <a 
 {% if n%2==0 %}
-class="d-flex flex-row mx-auto my-2"
+class="color-on-hover d-flex flex-row mx-auto my-2"
 {% else %}
-class="d-flex flex-row-reverse mx-auto my-2"
+class="color-on-hover d-flex flex-row-reverse mx-auto my-2"
 {% endif %}
 style="
   background: linear-gradient(var(--primary-color), transparent 90%);
@@ -76,7 +80,7 @@ style="
   border-radius: 25px;
   width: 80%;
 " 
-href="/{{ platform.lower() }}/user/{{ xbox_search.results[n].result.gamertag }}">
+href="/{{ platform.lower() }}/xuid/{{ xbox_search.results[n].result.id }}">
   <img
     style="
       border-radius: 25px;

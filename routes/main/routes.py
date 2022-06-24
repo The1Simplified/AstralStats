@@ -1,19 +1,6 @@
-import asyncio
 from flask import Blueprint, render_template
 
-import os
-import sys
-import aiohttp
-
-from xbox import *
-from xbox.webapi.api.client import XboxLiveClient
-from xbox.webapi.authentication.manager import AuthenticationManager
-from xbox.webapi.authentication.models import OAuth2TokenResponse
-
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
-client_id = os.environ.get("MS_CLIENT_ID")
-client_secret = os.environ.get("MS_CLIENT_SECRET")
+from routes.xbox.utils import get_user_search
 
 main = Blueprint('main', __name__)
 
@@ -25,19 +12,6 @@ async def homepage():
 @main.route("/search/<string:platform>/<string:username>", methods=["GET", "POST"])
 async def saerch(platform: str = "", username: str = ""):
     platform_string = f"color:var(--provider-color-{platform})"
-    async with aiohttp.ClientSession() as session:
-        auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
-        try:
-            tokens = os.environ.get("PRIMARY_SIGN_IN_TOKEN")
-            auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
-        except FileNotFoundError:
-            exit(-1)
-        try:
-            await auth_mgr.refresh_tokens()
-        except aiohttp.ClientResponseError:
-            sys.exit(-1)
-        os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
-        xbl_client = XboxLiveClient(auth_mgr)
-        xbox_search = await xbl_client.usersearch.get_live_search(username)
+    xbox_search = await get_user_search(username)
 
     return render_template("search.html", platform=platform, username=username, xbox_search=xbox_search, platform_string=platform_string)

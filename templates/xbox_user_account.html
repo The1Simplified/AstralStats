@@ -1,3 +1,86 @@
 {% extends "layout.html" %}{% block content %}
-xbox_user_account
+
+<div class="account-section d-flex flex-row justify-content-left" style="color: white;">
+  <img
+    style="
+      border-radius: 25px;
+      width: 20%;
+      -webkit-mask-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 1)),
+        to(rgba(0, 0, 0, 0))
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+    "
+    onerror="javascript:this.src='/static/site_images/default.png'"
+    src="{{ user_data.display_pic_raw|replace('&background=0xababab&mode=Padding', '') }}"
+  />
+  <div class="col-md-auto m-4" style="overflow: hidden; white-space: nowrap; text-align: left;">
+      <h2 class="mb-4">
+        <i class="fa-brands fa-xbox"></i> {{ user_data.display_name }}
+      </h2>
+      {% if user_data.real_name|length > 1 %}
+      <p>{{ user_data.real_name }}</p>
+      {% else %} {% endif %}
+      <p>{{ user_data.presence_text }}</p>
+      <img style="width: 16px;" src="{{ url_for('static', filename='site_images/Gamerscore-32x32.webp') }}"/>
+      <span>{{ user_data.gamer_score }}</span>
+    </div>
+  </div>
+</div>
+<!-- Account Body -->
+<div class="d-flex flex-row justify-content-left m-4">
+  <!-- Friend Section -->
+  <div
+    class="account-section col-md-3 mr-4 justify-content-center"
+    style="max-width: 30vw; height: fit-content; color: white"
+  >
+  <h2 class="text-center border-bottom" style="font-size: 100%;">{{ user_data.display_name }}'s Friends</h2>
+    {% for friend in user_friends_sorted[:10] %}
+    <a class="color-on-hover" href="/xbox/xuid/{{ friend.xuid }}">
+      <div class="row border-bottom">
+        <div class="col-md-4 m-2">
+          <img
+            style="
+              border-radius: 25px;
+              width: 100%;
+              -webkit-mask-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                from(rgba(0, 0, 0, 1)),
+                to(rgba(0, 0, 0, 0))
+              );
+              mask-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+              );
+            "
+            onerror="javascript:this.src='/static/site_images/default.png'"
+            src="{{ friend.display_pic_raw|replace('&background=0xababab&mode=Padding', '') }}"
+          />
+        </div>
+        <div class="col m-2" style="overflow: hidden; white-space: nowrap; text-align: left;">
+          <p><i class="fa-brands fa-xbox"></i> {{ friend.display_name }}</p>
+          {% if friend.real_name|length > 1 %}
+          <p>{{ friend.real_name }}</p>
+          {% endif %}
+          <p>{{ friend.presence_text }}</p>
+          <img style="width: 16px;" src="{{ url_for('static', filename='site_images/Gamerscore-32x32.webp') }}"/>
+          <span>{{ friend.gamer_score }}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    <a href="/xbox/xuid/{{ user_data.xuid }}/friends"><h2 class="color-on-hover text-center" style="font-size: 100%;">View All</h2></a>
+  </div>
+  <div class="account-section col justify-content-left"></div>
+</div>
 {%endblock%}

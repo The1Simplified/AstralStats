@@ -147,8 +147,23 @@
             </div>
           </div>
         </nav>
-
-        <div id="elements">{% block content %}{% endblock%}</div>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="text-center"
+          style="
+            background: var(--secondary-color);
+            color: white;
+            border: 2px solid;
+            border-color: transparent transparent var(--secondary-color)
+              transparent;
+          "
+        >
+        <i class="fa-solid fa-triangle-exclamation"></i>
+          {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div id="elements">{% block content %}{%endblock%}</div>
       </div>
     </div>
 
@@ -178,8 +193,7 @@
         $("#gamertagSubmit").on("click", function () {
           var search = $("#gamertagInput").val();
           if ($.trim(search) != "") {
-            window.location.href =
-              "http://localhost:5000/search/@/" + search;
+            window.location.href = "http://localhost:5000/search/@/" + search;
           }
         });
       });
