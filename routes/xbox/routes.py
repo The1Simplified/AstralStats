@@ -1,7 +1,8 @@
 from aiohttp import ClientResponseError
-from flask import Blueprint, redirect, render_template, request, flash
+from flask import Blueprint, redirect, request, flash
 from pydantic import ValidationError
 from routes.xbox.utils import get_user_info
+from routes.main.utils import render_template
 
 xbox = Blueprint('xbox', __name__)
 
