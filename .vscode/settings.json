@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "Simpl1f1ed.mysql.pythonanywhere-services.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "AstralStats_DB",
+            "username": "Simpl1f1ed",
+            "password": "krukzgf9kEZPEyV1",
+            "name": "AstralStats_DB"
+        }
+    ]
+}
