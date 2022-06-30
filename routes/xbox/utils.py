@@ -37,19 +37,30 @@ async def get_user_search(username: str = ""):
         return xbox_search
 
 
-async def get_user_info(xuid: str = ""):
+async def get_user_info(xuid: str = "", client_token: str = ""):
     async with aiohttp.ClientSession() as session:
         auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
+
         try:
-            tokens = os.environ.get("PRIMARY_SIGN_IN_TOKEN")
+            if len(client_token) < 1:
+                tokens = os.environ.get("PRIMARY_SIGN_IN_TOKEN")
+            else:
+                tokens = client_token
             auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
         except FileNotFoundError:
             exit(-1)
+
         try:
             await auth_mgr.refresh_tokens()
         except aiohttp.ClientResponseError:
             sys.exit(-1)
-        os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
+
+        token_refresh = ''
+        if len(client_token) < 1:
+            os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
+        else:
+            token_refresh = auth_mgr.oauth.json()
+
         xbl_client = XboxLiveClient(auth_mgr)
         friends_raw = await xbl_client.people.get_friends_by_xuid(xuid)
         friends_invert_sorted = sorted(friends_raw.people,
@@ -68,4 +79,4 @@ async def get_user_info(xuid: str = ""):
             if flag:
                 break
 
-        return user_friends_sorted, user_data
+        return user_friends_sorted, user_data, token_refresh

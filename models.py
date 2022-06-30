@@ -15,6 +15,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
+    xbox_token = db.Column(db.String())
 
     def get_reset_token(self, expires_sec=1800):
         serialized = Serializer(current_app.config['SECRET_KEY'], expires_sec)
