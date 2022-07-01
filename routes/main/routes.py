@@ -63,5 +63,5 @@ async def register():
                     password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        return redirect(url_for('users.login'))
+        return redirect(url_for('main.login'))
     return render_template('register.html', title='Register', form=form)
