@@ -4,3 +4,7 @@ flask_session
 flask_wtf
 flask_sqlalchemy
 xbox-webapi
+itsdangerous==2.0.1
+email_validator
+mysql-connector
+sshtunnel
