@@ -3,6 +3,8 @@ flask[async]
 flask_session
 flask_wtf
 flask_sqlalchemy
+flask-bcrypt
+flask_login
 xbox-webapi
 itsdangerous==2.0.1
 email_validator
