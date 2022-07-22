@@ -1,10 +1,6 @@
-import pathlib
-import re
-
 from flask_wtf import FlaskForm
-from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Length, EqualTo, ValidationError
 from flask_login import current_user
 from models import User
 
@@ -14,7 +10,7 @@ class RegistrationForm(FlaskForm):
     username = StringField('Username',
                         validators=[DataRequired()])
     email = StringField('Email',
-                        validators=[Email()])
+                        validators=[])
     password = PasswordField('Password', validators=[
                              DataRequired(), Length(min=8)])
     confirm_password = PasswordField('Confirm Password',
@@ -30,10 +26,11 @@ class RegistrationForm(FlaskForm):
 
     def validate_email(self, email):
         """ Validates that an email is an email """
-        user = User.query.filter_by(email=email.data).first()
-        if user:
-            raise ValidationError(
-                'That email is taken. Please choose a different one.')
+        if email.data is not '':
+            user = User.query.filter_by(email=email.data).first()
+            if user:
+                raise ValidationError(
+                    'That email is taken. Please choose a different one.')
 
 
 class LoginForm(FlaskForm):

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}{% block content %}
+<div class="row">
+<a class="col" href="{{ url_for('xbox.login') }}">
+  <div
+    style="
+      color: white;
+      text-align: center;
+      font-size: 1.9em !important;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      background: var(--provider-color-Xbox);
+    "
+  >
+    {% if current_user.xbox_token|length < 1 %}
+    <div class="p-1">
+      <i class="fa-brands fa-xbox"></i>
+      Xbox {% else %} {{ current_user.xbox_token }} {% endif %}
+    </div>
+  </div>
+</a>
+<a class="col" href="{{ url_for('playstation.main') }}">
+    <div
+      style="
+        color: white;
+        text-align: center;
+        font-size: 1.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background: var(--provider-color-Playstation);
+      "
+    >
+      <div class="p-1">
+        <i class="fa-brands fa-playstation"></i>
+        PSN
+      </div>
+    </div>
+  </a>
+  <a class="col" href="{{ url_for('steam.main') }}">
+    <div
+      style="
+        color: white;
+        text-align: center;
+        font-size: 1.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background: var(--provider-color-Steam);
+      "
+    >
+      <div class="p-1">
+        <i class="fa-brands fa-steam"></i>
+        Steam
+      </div>
+    </div>
+  </a>
+</div>
+{%endblock%}

@@ -2,7 +2,6 @@ import asyncio
 import os
 import sys
 import aiohttp
-import platform
 
 from xbox import *
 from xbox.webapi.api.client import XboxLiveClient
@@ -80,3 +79,50 @@ async def get_user_info(xuid: str = "", client_token: str = ""):
                 break
 
         return user_friends_sorted, user_data, token_refresh
+
+
+async def get_signin_url():
+    async with aiohttp.ClientSession() as session:
+        auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
+        try:
+            tokens = os.environ.get("PRIMARY_SIGN_IN_TOKEN")
+            auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
+        except FileNotFoundError:
+            exit(-1)
+        try:
+            await auth_mgr.refresh_tokens()
+        except aiohttp.ClientResponseError:
+            sys.exit(-1)
+        os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
+        auth_url = auth_mgr.generate_authorization_url()
+
+        return auth_url
+
+
+async def get_user_tokens(code):
+    async with aiohttp.ClientSession() as session:
+        auth_mgr = AuthenticationManager(session, client_id, client_secret, "")
+        try:
+            tokens = os.environ.get("PRIMARY_SIGN_IN_TOKEN")
+            auth_mgr.oauth = OAuth2TokenResponse.parse_raw(tokens)
+        except FileNotFoundError:
+            exit(-1)
+        try:
+            await auth_mgr.refresh_tokens()
+        except aiohttp.ClientResponseError:
+            sys.exit(-1)
+        os.environ["PRIMARY_SIGN_IN_TOKEN"] = auth_mgr.oauth.json()
+
+        auth_mgr.request_tokens(code)
+
+        oauth = await auth_mgr.refresh_oauth_token()
+        user_token = await auth_mgr.request_user_token()
+        xsts_token = await auth_mgr.request_xsts_token()
+
+        tokens = {
+            'oauth': str(oauth),
+            'user_token': str(user_token),
+            'xsts_token': str(xsts_token)
+        }
+
+        return tokens

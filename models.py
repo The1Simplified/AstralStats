@@ -6,7 +6,9 @@ from __init__ import db, login_manager
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    user = User.query.get(int(user_id))
+    db.session.remove()
+    return user
 
 
 class User(db.Model, UserMixin):
@@ -15,7 +17,8 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True)
     password = db.Column(db.String(60), nullable=False)
-    xbox_token = db.Column(db.String)
+    xbox_token = db.Column(db.String, default='')
+    xbox_account_info = db.Column(db.String, default ='')
 
     def get_reset_token(self, expires_sec=1800):
         serialized = Serializer(current_app.config['SECRET_KEY'], expires_sec)
